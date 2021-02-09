@@ -1,6 +1,6 @@
 # Alfred Workflow - Find oneM2M Short Names 
 
-This Alfred workflow provides a search for oneM2M attribute long and short names.
+This [Alfred](https://www.alfredapp.com) workflow provides a search for oneM2M attribute long and short names.
 
 ![](workflow.gif)
 ## Installation & Maintenance

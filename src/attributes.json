@@ -3,16 +3,16 @@
         "shortname": "op",
         "attribute": "operation",
         "occursIn": [
-            "dynAuthDasRequest",
-            "Request",
             "authorizationDecision",
             "request",
+            "Request",
+            "dynAuthDasRequest",
             "operationMonitor"
         ],
         "categories": [
-            "Complex Data Types",
             "Resource Attributes",
-            "Primitive Parameters"
+            "Primitive Parameters",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -22,10 +22,10 @@
         "shortname": "to",
         "attribute": "to",
         "occursIn": [
-            "authorizationPolicy",
+            "authorizationDecision",
             "Request",
             "Response",
-            "authorizationDecision"
+            "authorizationPolicy"
         ],
         "categories": [
             "Resource Attributes",
@@ -39,10 +39,10 @@
         "shortname": "fr",
         "attribute": "from",
         "occursIn": [
+            "authorizationDecision",
             "Request",
             "authorizationInformation",
-            "Response",
-            "authorizationDecision"
+            "Response"
         ],
         "categories": [
             "Resource Attributes",
@@ -70,19 +70,448 @@
         "shortname": "ty",
         "attribute": "resourceType",
         "occursIn": [
-            "Request",
-            "All",
             "filterCriteria",
-            "accessControlObjectDetails"
+            "accessControlObjectDetails",
+            "Request",
+            "All"
         ],
         "categories": [
-            "Complex Data Types",
             "Resource Attributes",
             "Primitive Parameters",
+            "Complex Data Types",
             "Common and Field Device Configuration"
         ],
         "documents": [
             "TS-0022-Field_Device_Configuration-V4_2_0.docx",
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "pc",
+        "attribute": "primitiveContent",
+        "occursIn": [
+            "Request",
+            "request",
+            "Response"
+        ],
+        "categories": [
+            "Resource Attributes",
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rids",
+        "attribute": "roleIDs",
+        "occursIn": [
+            "authorizationDecision",
+            "Request",
+            "authorizationInformation",
+            "tokenPermission"
+        ],
+        "categories": [
+            "Resource Attributes",
+            "Primitive Parameters",
+            "Complex Data Types"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "ot",
+        "attribute": "originatingTimestamp",
+        "occursIn": [
+            "Request",
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rqet",
+        "attribute": "requestExpirationTimestamp",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rset",
+        "attribute": "resultExpirationTimestamp",
+        "occursIn": [
+            "Request",
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "oet",
+        "attribute": "operationExecutionTime",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rt",
+        "attribute": "responseType",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rp",
+        "attribute": "resultPersistence",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rcn",
+        "attribute": "resultContent",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "ec",
+        "attribute": "eventCategory",
+        "occursIn": [
+            "Request",
+            "Response",
+            "delivery"
+        ],
+        "categories": [
+            "Resource Attributes",
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "da",
+        "attribute": "deliveryAggregation",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "gid",
+        "attribute": "groupRequestIdentifier",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "fc",
+        "attribute": "filterCriteria",
+        "occursIn": [
+            "IPEDiscoveryRequest",
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters",
+            "Complex Data Types"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "drt",
+        "attribute": "desiredIdentifierResultType",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rsc",
+        "attribute": "responseStatusCode",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "tkns",
+        "attribute": "tokens",
+        "occursIn": [
+            "dynAuthDasResponse",
+            "authorizationDecision",
+            "Request"
+        ],
+        "categories": [
+            "Resource Attributes",
+            "Primitive Parameters",
+            "Complex Data Types"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "tids",
+        "attribute": "tokenIDs",
+        "occursIn": [
+            "authorizationDecision",
+            "Request",
+            "authorizationInformation",
+            "dynAuthDasRequest"
+        ],
+        "categories": [
+            "Resource Attributes",
+            "Primitive Parameters",
+            "Complex Data Types"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "tqi",
+        "attribute": "tokenRequestIndicator",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "ltids",
+        "attribute": "localTokenIDs",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "grtm",
+        "attribute": "groupRequestTargetMembers",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "ati",
+        "attribute": "assignedTokenIdentifiers",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "tqf",
+        "attribute": "tokenRequestInformation",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "cnst",
+        "attribute": "contentStatus",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "cnot",
+        "attribute": "contentOffset",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "asi",
+        "attribute": "authorSignIndicator",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "asri",
+        "attribute": "authorSignReqInfo",
+        "occursIn": [
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "aus",
+        "attribute": "authorSigns",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "auri",
+        "attribute": "authorRelIndicator",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "sqi",
+        "attribute": "semanticQueryIndicator",
+        "occursIn": [
+            "Request"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "rvi",
+        "attribute": "releaseVersionIndicator",
+        "occursIn": [
+            "Request",
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
+            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
+        ]
+    },
+    {
+        "shortname": "vsi",
+        "attribute": "vendorInformation",
+        "occursIn": [
+            "Request",
+            "Response"
+        ],
+        "categories": [
+            "Primitive Parameters"
+        ],
+        "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
         ]
     },
@@ -105,8 +534,8 @@
         "attribute": "m2m:responsePrimitive",
         "occursIn": [
             "Response",
-            "transaction",
-            "aggregatedResponse"
+            "aggregatedResponse",
+            "transaction"
         ],
         "categories": [
             "Primitive Root Elements"
@@ -187,9 +616,9 @@
         "shortname": "et",
         "attribute": "expirationTime",
         "occursIn": [
-            "All",
             "CSEBase",
-            "All except contentInstance"
+            "All except contentInstance",
+            "All"
         ],
         "categories": [
             "Resource Attributes",
@@ -204,14 +633,14 @@
         "shortname": "lbl",
         "attribute": "labels",
         "occursIn": [
-            "All (optional)",
-            "All",
             "filterCriteria",
-            "eventNotificationCriteria"
+            "eventNotificationCriteria",
+            "All",
+            "All (optional)"
         ],
         "categories": [
-            "Complex Data Types",
             "Resource Attributes",
+            "Complex Data Types",
             "Common and Field Device Configuration"
         ],
         "documents": [
@@ -281,11 +710,11 @@
         "shortname": "st",
         "attribute": "stateTag",
         "occursIn": [
-            "flexContainer",
+            "container",
             "contentInstance",
-            "delivery",
             "request",
-            "container"
+            "delivery",
+            "flexContainer"
         ],
         "categories": [
             "Resource Attributes"
@@ -313,13 +742,13 @@
         "shortname": "pv",
         "attribute": "privileges",
         "occursIn": [
-            "accessControlPolicy",
+            "setOfPermissions",
             "tokenPermission",
-            "setOfPermissions"
+            "accessControlPolicy"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -433,10 +862,10 @@
         "shortname": "poa",
         "attribute": "pointOfAccess",
         "occursIn": [
+            "CSEBase",
             "registration",
-            "remoteCSE",
             "AE",
-            "CSEBase"
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes",
@@ -451,18 +880,18 @@
         "shortname": "or",
         "attribute": "ontologyRef",
         "occursIn": [
-            "IPEDiscoveryRequest",
-            "contentInstance",
-            "dynAuthDasRequest",
-            "semanticDescriptor. flexContainer",
-            "timeSeries",
             "container",
-            "operationMonitor",
-            "AE"
+            "contentInstance",
+            "AE",
+            "semanticDescriptor. flexContainer",
+            "IPEDiscoveryRequest",
+            "dynAuthDasRequest",
+            "timeSeries",
+            "operationMonitor"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -473,9 +902,9 @@
         "attribute": "nodeLink",
         "occursIn": [
             "flexContainer",
-            "remoteCSE",
+            "CSEBase",
             "AE",
-            "CSEBase"
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -540,8 +969,8 @@
         "shortname": "ape",
         "attribute": "activityPatternElements",
         "occursIn": [
-            "remoteCSE",
-            "AE"
+            "AE",
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -554,8 +983,8 @@
         "shortname": "tren",
         "attribute": "triggerEnable",
         "occursIn": [
-            "remoteCSE",
-            "AE"
+            "AE",
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -568,8 +997,8 @@
         "shortname": "etc",
         "attribute": "enableTimeCompensation",
         "occursIn": [
-            "remoteCSE",
-            "AE"
+            "AE",
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -583,24 +1012,24 @@
         "attribute": "creator",
         "occursIn": [
             "semanticDescriptor",
-            "backgroundDataTransfer",
-            "flexContainer",
-            "notificationTargetPolicy",
-            "contentInstance",
-            "crossResourceSubscription",
-            "statsConfig",
-            "subscription",
-            "timeSeries",
+            "container",
             "pollingChannel",
+            "contentInstance",
+            "statsConfig",
+            "crossResourceSubscription",
             "notification",
             "statsCollect",
-            "container",
             "eventConfig",
-            "group"
+            "subscription",
+            "notificationTargetPolicy",
+            "backgroundDataTransfer",
+            "group",
+            "timeSeries",
+            "flexContainer"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -611,8 +1040,8 @@
         "attribute": "maxNrOfInstances",
         "occursIn": [
             "timeSeries",
-            "container",
-            "flexContainer"
+            "flexContainer",
+            "container"
         ],
         "categories": [
             "Resource Attributes"
@@ -626,8 +1055,8 @@
         "attribute": "maxByteSize",
         "occursIn": [
             "timeSeries",
-            "container",
-            "flexContainer"
+            "flexContainer",
+            "container"
         ],
         "categories": [
             "Resource Attributes"
@@ -641,8 +1070,8 @@
         "attribute": "maxInstanceAge",
         "occursIn": [
             "timeSeries",
-            "container",
-            "flexContainer"
+            "flexContainer",
+            "container"
         ],
         "categories": [
             "Resource Attributes"
@@ -656,8 +1085,8 @@
         "attribute": "currentNrOfInstances",
         "occursIn": [
             "timeSeries",
-            "container",
-            "flexContainer"
+            "flexContainer",
+            "container"
         ],
         "categories": [
             "Resource Attributes"
@@ -670,13 +1099,13 @@
         "shortname": "loc",
         "attribute": "location",
         "occursIn": [
-            "flexContainer",
             "CSEBase",
             "remoteCSE",
-            "timeSeries",
             "container",
+            "AE",
             "deviceInfo",
-            "AE"
+            "timeSeries",
+            "flexContainer"
         ],
         "categories": [
             "Resource Attributes"
@@ -689,11 +1118,11 @@
         "shortname": "hld",
         "attribute": "holder",
         "occursIn": [
-            "timeSeriesInstance",
-            "accessControlPolicy",
-            "pollingChannel",
             "flexContainerInstance",
-            "All except contentInstance"
+            "pollingChannel",
+            "All except contentInstance",
+            "accessControlPolicy",
+            "timeSeriesInstance"
         ],
         "categories": [
             "Resource Attributes"
@@ -707,8 +1136,8 @@
         "attribute": "currentByteSize",
         "occursIn": [
             "timeSeries",
-            "container",
-            "flexContainer"
+            "flexContainer",
+            "container"
         ],
         "categories": [
             "Resource Attributes"
@@ -761,10 +1190,10 @@
         "shortname": "cs",
         "attribute": "contentSize",
         "occursIn": [
-            "timeSeriesInstance",
+            "flexContainerInstance",
             "contentInstance",
-            "flexContainer",
-            "flexContainerInstance"
+            "timeSeriesInstance",
+            "flexContainer"
         ],
         "categories": [
             "Resource Attributes"
@@ -794,21 +1223,8 @@
             "flexContainer"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
-        "shortname": "pc",
-        "attribute": "primitiveContent",
-        "occursIn": [
-            "request"
-        ],
-        "categories": [
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -818,8 +1234,8 @@
         "shortname": "con",
         "attribute": "content",
         "occursIn": [
-            "timeSeriesInstance",
-            "contentInstance"
+            "contentInstance",
+            "timeSeriesInstance"
         ],
         "categories": [
             "Resource Attributes"
@@ -845,8 +1261,8 @@
         "shortname": "cst",
         "attribute": "cseType",
         "occursIn": [
-            "remoteCSE",
-            "CSEBase"
+            "CSEBase",
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -859,11 +1275,11 @@
         "shortname": "csi",
         "attribute": "CSE-ID",
         "occursIn": [
-            "AEContactListPerCSE",
             "CSEBase",
             "remoteCSE",
             "service SubscribedNode",
-            "registration"
+            "registration",
+            "AEContactListPerCSE"
         ],
         "categories": [
             "Resource Attributes",
@@ -904,12 +1320,12 @@
         "shortname": "ctm",
         "attribute": "currentTime",
         "occursIn": [
-            "timeSyncBeaconNotification",
-            "CSEBase"
+            "CSEBase",
+            "timeSyncBeaconNotification"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -932,13 +1348,13 @@
         "shortname": "tg",
         "attribute": "target",
         "occursIn": [
-            "request",
+            "setOfNotificationStatsInfo",
             "delivery",
-            "setOfNotificationStatsInfo"
+            "request"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -947,19 +1363,6 @@
     {
         "shortname": "ls",
         "attribute": "lifespan",
-        "occursIn": [
-            "delivery"
-        ],
-        "categories": [
-            "Resource Attributes"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
-        "shortname": "ec",
-        "attribute": "eventCat",
         "occursIn": [
             "delivery"
         ],
@@ -1000,8 +1403,8 @@
         "shortname": "evi",
         "attribute": "eventID",
         "occursIn": [
-            "statsCollect",
-            "eventConfig"
+            "eventConfig",
+            "statsCollect"
         ],
         "categories": [
             "Resource Attributes"
@@ -1254,13 +1657,13 @@
         "shortname": "spty",
         "attribute": "specializationType",
         "occursIn": [
-            "childResourceRef",
             "accessControlObjectDetails",
+            "childResourceRef",
             "group"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -1558,22 +1961,22 @@
         "shortname": "dc",
         "attribute": "description",
         "occursIn": [
-            "mgmtCmd",
+            "ontology",
             "All",
+            "all management resources from firmware",
+            "mgmtCmd",
             "faultDetection",
             "dmDeviceInfo",
-            "ontologyMappingAlgorithm",
-            "all management resources from firmware",
-            "ontology",
-            "mgmtObj"
+            "mgmtObj",
+            "ontologyMappingAlgorithm"
         ],
         "categories": [
             "Resource Attributes",
             "Common and Field Device Configuration"
         ],
         "documents": [
-            "TS-0022-Field_Device_Configuration-V4_2_0.docx",
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx",
+            "TS-0022-Field_Device_Configuration-V4_2_0.docx",
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
         ]
     },
@@ -1594,14 +1997,14 @@
         "shortname": "mgd",
         "attribute": "mgmtDefinition",
         "occursIn": [
-            "specializationType",
-            "all management resources from firmware",
             "All",
-            "mgmtObj"
+            "mgmtObj",
+            "specializationType",
+            "all management resources from firmware"
         ],
         "categories": [
-            "Complex Data Types",
             "Resource Attributes",
+            "Complex Data Types",
             "Common and Field Device Configuration"
         ],
         "documents": [
@@ -1613,8 +2016,8 @@
         "shortname": "obis",
         "attribute": "objectIDs",
         "occursIn": [
-            "All",
-            "mgmtObj"
+            "mgmtObj",
+            "All"
         ],
         "categories": [
             "Resource Attributes",
@@ -1629,8 +2032,8 @@
         "shortname": "obps",
         "attribute": "objectPaths",
         "occursIn": [
-            "All",
-            "mgmtObj"
+            "mgmtObj",
+            "All"
         ],
         "categories": [
             "Resource Attributes",
@@ -1763,12 +2166,12 @@
         "attribute": "CSEBase",
         "occursIn": [
             "registration",
-            "n/a",
+            "sbu",
             "remoteCSE"
         ],
         "categories": [
-            "Resource Types",
             "Resource Attributes",
+            "Resource Types",
             "Common and Field Device Configuration"
         ],
         "documents": [
@@ -1781,9 +2184,9 @@
         "attribute": "M2M-Ext-ID",
         "occursIn": [
             "triggerRequest",
-            "locationPolicy",
+            "AE",
             "remoteCSE",
-            "AE"
+            "locationPolicy"
         ],
         "categories": [
             "Resource Attributes"
@@ -1809,8 +2212,8 @@
         "shortname": "tri",
         "attribute": "Trigger-Recipient-ID",
         "occursIn": [
-            "triggerRequest",
             "registration",
+            "triggerRequest",
             "remoteCSE"
         ],
         "categories": [
@@ -2112,8 +2515,8 @@
         "shortname": "exc",
         "attribute": "expirationCounter",
         "occursIn": [
-            "subscription",
-            "crossResourceSubscription"
+            "crossResourceSubscription",
+            "subscription"
         ],
         "categories": [
             "Resource Attributes"
@@ -2126,13 +2529,13 @@
         "shortname": "nu",
         "attribute": "notificationURI",
         "occursIn": [
-            "subscription",
+            "responseTypeInfo",
             "crossResourceSubscription",
-            "responseTypeInfo"
+            "subscription"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -2159,8 +2562,8 @@
             "notification"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -2261,8 +2664,8 @@
         "shortname": "nec",
         "attribute": "notificationEventCat",
         "occursIn": [
-            "subscription",
-            "crossResourceSubscription"
+            "crossResourceSubscription",
+            "subscription"
         ],
         "categories": [
             "Resource Attributes"
@@ -2275,8 +2678,8 @@
         "shortname": "su",
         "attribute": "subscriberURI",
         "occursIn": [
-            "subscription",
-            "crossResourceSubscription"
+            "crossResourceSubscription",
+            "subscription"
         ],
         "categories": [
             "Resource Attributes"
@@ -2289,15 +2692,15 @@
         "shortname": "vr",
         "attribute": "version",
         "occursIn": [
-            "software",
-            "token",
-            "tokenClaimSet",
+            "softwareUninstallArgsType",
             "firmware",
-            "softwareUninstallArgsType"
+            "tokenClaimSet",
+            "software",
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -2307,16 +2710,16 @@
         "shortname": "url",
         "attribute": "URL",
         "occursIn": [
-            "software",
-            "deployPackage",
-            "update",
             "downloadArgsType",
             "firmware",
-            "updateFirmware"
+            "software",
+            "deployPackage",
+            "updateFirmware",
+            "update"
         ],
         "categories": [
-            "Complex Data Types",
             "Resource Attributes",
+            "Complex Data Types",
             "Action Arguments"
         ],
         "documents": [
@@ -2889,12 +3292,12 @@
         "shortname": "rbo",
         "attribute": "reboot",
         "occursIn": [
-            "execReqArgsListType",
-            "reboot"
+            "reboot",
+            "execReqArgsListType"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3021,12 +3424,12 @@
         "shortname": "cmlk",
         "attribute": "mgmtLink",
         "occursIn": [
+            "cmdhPolicy",
             "All",
+            "cmdhNwAccessRule",
             "cmdhDefaults",
             "activeCmdhPolicy",
-            "cmdhNwAccessRule",
-            "cmdhNetworkAccessRules",
-            "cmdhPolicy"
+            "cmdhNetworkAccessRules"
         ],
         "categories": [
             "Resource Attributes",
@@ -3481,8 +3884,8 @@
             "notificationTargetPolicy"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3752,12 +4155,12 @@
         "shortname": "dgt",
         "attribute": "dataGenerationTime",
         "occursIn": [
-            "timeSeriesInstance",
-            "n/a"
+            "sbu",
+            "timeSeriesInstance"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx",
@@ -3820,13 +4223,13 @@
         "shortname": "tkid",
         "attribute": "tokenID",
         "occursIn": [
-            "token",
+            "dynAuthLocalTokenIdAssignments",
             "tokenClaimSet",
-            "dynAuthLocalTokenIdAssignments"
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3849,13 +4252,13 @@
         "shortname": "tkis",
         "attribute": "issuer",
         "occursIn": [
-            "role",
+            "tokenClaimSet",
             "token",
-            "tokenClaimSet"
+            "role"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3865,13 +4268,13 @@
         "shortname": "tkhd",
         "attribute": "holder",
         "occursIn": [
-            "role",
+            "tokenClaimSet",
             "token",
-            "tokenClaimSet"
+            "role"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3881,13 +4284,13 @@
         "shortname": "tknb",
         "attribute": "notBefore",
         "occursIn": [
-            "role",
+            "tokenClaimSet",
             "token",
-            "tokenClaimSet"
+            "role"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3897,13 +4300,13 @@
         "shortname": "tkna",
         "attribute": "notAfter",
         "occursIn": [
-            "role",
+            "tokenClaimSet",
             "token",
-            "tokenClaimSet"
+            "role"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3913,12 +4316,12 @@
         "shortname": "tknm",
         "attribute": "tokenName",
         "occursIn": [
-            "token",
-            "tokenClaimSet"
+            "tokenClaimSet",
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3928,12 +4331,12 @@
         "shortname": "tkau",
         "attribute": "audience",
         "occursIn": [
-            "token",
-            "tokenClaimSet"
+            "tokenClaimSet",
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3943,12 +4346,12 @@
         "shortname": "tkps",
         "attribute": "permissions",
         "occursIn": [
-            "token",
-            "tokenClaimSet"
+            "tokenClaimSet",
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3958,12 +4361,12 @@
         "shortname": "tkex",
         "attribute": "extension",
         "occursIn": [
-            "token",
-            "tokenClaimSet"
+            "tokenClaimSet",
+            "token"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -3973,9 +4376,9 @@
         "shortname": "esi",
         "attribute": "e2eSecInfo",
         "occursIn": [
-            "remoteCSE",
+            "CSEBase",
             "AE",
-            "CSEBase"
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -3988,9 +4391,9 @@
         "shortname": "srv",
         "attribute": "supportedReleaseVersions",
         "occursIn": [
-            "remoteCSE",
+            "CSEBase",
             "AE",
-            "CSEBase"
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -4029,8 +4432,8 @@
         "shortname": "giip",
         "attribute": "inputDataPointLinks",
         "occursIn": [
-            "genericInterworkingOperationInstance",
-            "genericInterworkingService"
+            "genericInterworkingService",
+            "genericInterworkingOperationInstance"
         ],
         "categories": [
             "Resource Attributes"
@@ -4043,8 +4446,8 @@
         "shortname": "giop",
         "attribute": "outputDataPointLinks",
         "occursIn": [
-            "genericInterworkingOperationInstance",
-            "genericInterworkingService"
+            "genericInterworkingService",
+            "genericInterworkingOperationInstance"
         ],
         "categories": [
             "Resource Attributes"
@@ -4174,8 +4577,8 @@
         "shortname": "crv",
         "attribute": "currentValue",
         "occursIn": [
-            "smokeSensor",
-            "allJoynProperty"
+            "allJoynProperty",
+            "smokeSensor"
         ],
         "categories": [
             "Resource Attributes"
@@ -4215,21 +4618,21 @@
         "shortname": "sus",
         "attribute": "status",
         "occursIn": [
-            "actionStatus",
+            "authorizationInformation",
+            "boiler",
             "authorizationPolicy",
+            "authorizationDecision",
+            "dmEventLog",
             "faultDetection",
             "filterInf",
-            "authorizationInformation",
-            "dmEventLog",
-            "authorizationDecision",
-            "electricVehicleConnector",
+            "actionStatus",
             "e2eQosPolicy",
-            "boiler",
+            "electricVehicleConnector",
             "mediaSelect"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx",
@@ -4253,59 +4656,12 @@
         "shortname": "fu",
         "attribute": "filterUsage",
         "occursIn": [
-            "authorizationDecision",
-            "filterCriteria"
+            "filterCriteria",
+            "authorizationDecision"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
-        "shortname": "rids",
-        "attribute": "roleIDs",
-        "occursIn": [
-            "authorizationDecision",
-            "tokenPermission",
-            "authorizationInformation"
-        ],
-        "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
-        "shortname": "tids",
-        "attribute": "tokenIDs",
-        "occursIn": [
-            "authorizationDecision",
-            "dynAuthDasRequest",
-            "authorizationInformation"
-        ],
-        "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
-        "shortname": "tkns",
-        "attribute": "tokens",
-        "occursIn": [
-            "authorizationDecision",
-            "dynAuthDasResponse"
-        ],
-        "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -4332,8 +4688,8 @@
             "dynAuthDasRequest"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -4347,8 +4703,8 @@
             "dynAuthDasRequest"
         ],
         "categories": [
-            "Complex Data Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Complex Data Types"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -4827,9 +5183,9 @@
         "shortname": "egid",
         "attribute": "externalGroupID",
         "occursIn": [
-            "remoteCSE",
             "LocalMulticastGroup",
-            "nwMonitoringReq"
+            "nwMonitoringReq",
+            "remoteCSE"
         ],
         "categories": [
             "Resource Attributes"
@@ -4972,12 +5328,12 @@
         "shortname": "tpe",
         "attribute": "triggerPurpose",
         "occursIn": [
-            "n/a",
-            "triggerRequest"
+            "triggerRequest",
+            "sbu"
         ],
         "categories": [
-            "Trigger Payload Fields",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Trigger Payload Fields"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -5013,12 +5369,12 @@
         "shortname": "tiae",
         "attribute": "triggerInfoAE-ID",
         "occursIn": [
-            "n/a",
-            "triggerRequest"
+            "triggerRequest",
+            "sbu"
         ],
         "categories": [
-            "Trigger Payload Fields",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Trigger Payload Fields"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -5028,12 +5384,12 @@
         "shortname": "tia",
         "attribute": "triggerInfoAddress",
         "occursIn": [
-            "n/a",
-            "triggerRequest"
+            "triggerRequest",
+            "sbu"
         ],
         "categories": [
-            "Trigger Payload Fields",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Trigger Payload Fields"
         ],
         "documents": [
             "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
@@ -5608,8 +5964,8 @@
         "shortname": "nse",
         "attribute": "notificationStatsEnable",
         "occursIn": [
-            "subscription",
-            "crossResourceSubscription"
+            "crossResourceSubscription",
+            "subscription"
         ],
         "categories": [
             "Resource Attributes"
@@ -5622,8 +5978,8 @@
         "shortname": "nsi",
         "attribute": "notificationStatsInfo",
         "occursIn": [
-            "subscription",
-            "crossResourceSubscription"
+            "crossResourceSubscription",
+            "subscription"
         ],
         "categories": [
             "Resource Attributes"
@@ -5884,7 +6240,7 @@
         "shortname": "acp",
         "attribute": "accessControlPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5897,7 +6253,7 @@
         "shortname": "acpa",
         "attribute": "accessControlPolicyAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5910,7 +6266,7 @@
         "shortname": "ae",
         "attribute": "AE",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5923,7 +6279,7 @@
         "shortname": "aea",
         "attribute": "AEAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5936,7 +6292,7 @@
         "shortname": "cnt",
         "attribute": "container",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5949,7 +6305,7 @@
         "shortname": "cnta",
         "attribute": "containerAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5962,7 +6318,7 @@
         "shortname": "cin",
         "attribute": "contentInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5975,7 +6331,7 @@
         "shortname": "cina",
         "attribute": "contentInstanceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -5988,7 +6344,7 @@
         "shortname": "cba",
         "attribute": "CSEBaseAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6001,7 +6357,7 @@
         "shortname": "dlv",
         "attribute": "delivery",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6014,7 +6370,7 @@
         "shortname": "evcg",
         "attribute": "eventConfig",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6027,7 +6383,7 @@
         "shortname": "exin",
         "attribute": "execInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6040,7 +6396,7 @@
         "shortname": "grp",
         "attribute": "group",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6053,7 +6409,7 @@
         "shortname": "grpa",
         "attribute": "groupAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6066,7 +6422,7 @@
         "shortname": "lcp",
         "attribute": "locationPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6079,7 +6435,7 @@
         "shortname": "lcpa",
         "attribute": "locationPolicyAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6092,7 +6448,7 @@
         "shortname": "mssp",
         "attribute": "m2mServiceSubscriptionProfile",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6105,7 +6461,7 @@
         "shortname": "mgc",
         "attribute": "mgmtCmd",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6118,7 +6474,7 @@
         "shortname": "nod",
         "attribute": "node",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6131,7 +6487,7 @@
         "shortname": "noda",
         "attribute": "nodeAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6144,7 +6500,7 @@
         "shortname": "pch",
         "attribute": "pollingChannel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6157,7 +6513,7 @@
         "shortname": "csr",
         "attribute": "remoteCSE",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6170,7 +6526,7 @@
         "shortname": "csra",
         "attribute": "remoteCSEAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6183,7 +6539,7 @@
         "shortname": "req",
         "attribute": "request",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6196,7 +6552,7 @@
         "shortname": "sch",
         "attribute": "schedule",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6209,7 +6565,7 @@
         "shortname": "scha",
         "attribute": "scheduleAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6222,7 +6578,7 @@
         "shortname": "asar",
         "attribute": "serviceSubscribedAppRule",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6235,7 +6591,7 @@
         "shortname": "svsn",
         "attribute": "serviceSubscribedNode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6248,7 +6604,7 @@
         "shortname": "stcl",
         "attribute": "statsCollect",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6261,7 +6617,7 @@
         "shortname": "stcg",
         "attribute": "statsConfig",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6274,7 +6630,7 @@
         "shortname": "sub",
         "attribute": "subscription",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6287,7 +6643,7 @@
         "shortname": "fwr",
         "attribute": "firmware",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6300,7 +6656,7 @@
         "shortname": "fwra",
         "attribute": "firmwareAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6313,7 +6669,7 @@
         "shortname": "swr",
         "attribute": "software",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6326,7 +6682,7 @@
         "shortname": "swra",
         "attribute": "softwareAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6339,7 +6695,7 @@
         "shortname": "mem",
         "attribute": "memory",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6352,7 +6708,7 @@
         "shortname": "mema",
         "attribute": "memoryAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6365,7 +6721,7 @@
         "shortname": "ani",
         "attribute": "areaNwkInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6378,7 +6734,7 @@
         "shortname": "ania",
         "attribute": "areaNwkInfoAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6391,7 +6747,7 @@
         "shortname": "andi",
         "attribute": "areaNwkDeviceInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6404,7 +6760,7 @@
         "shortname": "andia",
         "attribute": "areaNwkDeviceInfoAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6417,7 +6773,7 @@
         "shortname": "bat",
         "attribute": "battery",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6431,7 +6787,7 @@
         "shortname": "bata",
         "attribute": "batteryAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6444,7 +6800,7 @@
         "shortname": "dvi",
         "attribute": "deviceInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6457,7 +6813,7 @@
         "shortname": "dvia",
         "attribute": "deviceInfoAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6470,7 +6826,7 @@
         "shortname": "dvc",
         "attribute": "deviceCapability",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6483,7 +6839,7 @@
         "shortname": "dvca",
         "attribute": "deviceCapabilityAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6496,7 +6852,7 @@
         "shortname": "rbo ",
         "attribute": "reboot",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6509,7 +6865,7 @@
         "shortname": "rboa",
         "attribute": "rebootAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6522,7 +6878,7 @@
         "shortname": "evl",
         "attribute": "eventLog",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6535,7 +6891,7 @@
         "shortname": "evla",
         "attribute": "eventLogAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6548,7 +6904,7 @@
         "shortname": "cmp",
         "attribute": "cmdhPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6561,7 +6917,7 @@
         "shortname": "acmp",
         "attribute": "activeCmdhPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6574,7 +6930,7 @@
         "shortname": "cmdf",
         "attribute": "cmdhDefaults",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6587,7 +6943,7 @@
         "shortname": "cmdv",
         "attribute": "cmdhDefEcValue",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6600,7 +6956,7 @@
         "shortname": "cmpv",
         "attribute": "cmdhEcDefParamValues",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6613,7 +6969,7 @@
         "shortname": "cml",
         "attribute": "cmdhLimits",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6626,7 +6982,7 @@
         "shortname": "cmnr",
         "attribute": "cmdhNetworkAccessRules",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6639,7 +6995,7 @@
         "shortname": "cmwr",
         "attribute": "cmdhNwAccessRule",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6652,7 +7008,7 @@
         "shortname": "cmbf",
         "attribute": "cmdhBuffer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6665,7 +7021,7 @@
         "shortname": "ntpr",
         "attribute": "notificationTargetMgmtPolicyRef",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6678,7 +7034,7 @@
         "shortname": "ntp",
         "attribute": "notificationTargetPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6691,7 +7047,7 @@
         "shortname": "pdr",
         "attribute": "policyDeletionRules",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6704,7 +7060,7 @@
         "shortname": "dac",
         "attribute": "dynamicAuthorizationConsultation",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6717,7 +7073,7 @@
         "shortname": "smd",
         "attribute": "semanticDescriptor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6730,7 +7086,7 @@
         "shortname": "smda",
         "attribute": "semanticDescriptorAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6743,7 +7099,7 @@
         "shortname": "ts",
         "attribute": "timeSeries",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6756,7 +7112,7 @@
         "shortname": "tsa",
         "attribute": "timeSeriesAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6769,7 +7125,7 @@
         "shortname": "tsi",
         "attribute": "timeSeriesInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6782,7 +7138,7 @@
         "shortname": "tsia",
         "attribute": "timeSeriesInstanceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6795,7 +7151,7 @@
         "shortname": "rol",
         "attribute": "role",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6808,12 +7164,12 @@
         "shortname": "tk",
         "attribute": "token",
         "occursIn": [
-            "credentials",
-            "n/a"
+            "sbu",
+            "credentials"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx",
@@ -6824,7 +7180,7 @@
         "shortname": "gis",
         "attribute": "genericInterworkingService",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6837,7 +7193,7 @@
         "shortname": "gisa",
         "attribute": "genericInterworkingServiceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6850,7 +7206,7 @@
         "shortname": "gio",
         "attribute": "genericInterworkingOperationInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6863,7 +7219,7 @@
         "shortname": "gioa",
         "attribute": "genericInterworkingOperationInstanceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6876,7 +7232,7 @@
         "shortname": "ajsw",
         "attribute": "svcObjWrapper",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6889,7 +7245,7 @@
         "shortname": "ajswa",
         "attribute": "svcObjWrapperAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6902,7 +7258,7 @@
         "shortname": "ajfw",
         "attribute": "svcFwWrapper",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6915,7 +7271,7 @@
         "shortname": "ajfwa",
         "attribute": "svcFwWrapperAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6928,7 +7284,7 @@
         "shortname": "ajap",
         "attribute": "allJoynApp",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6941,7 +7297,7 @@
         "shortname": "ajapa",
         "attribute": "allJoynAppAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6954,7 +7310,7 @@
         "shortname": "ajso",
         "attribute": "allJoynSvcObject",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6967,7 +7323,7 @@
         "shortname": "ajsoa",
         "attribute": "allJoynSvcObjectAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6980,7 +7336,7 @@
         "shortname": "ajif",
         "attribute": "allJoynInterface",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -6993,7 +7349,7 @@
         "shortname": "ajifa",
         "attribute": "allJoynInterfaceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7006,7 +7362,7 @@
         "shortname": "ajmd",
         "attribute": "allJoynMethod",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7019,7 +7375,7 @@
         "shortname": "ajmda",
         "attribute": "allJoynMethodAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7032,7 +7388,7 @@
         "shortname": "ajmc",
         "attribute": "allJoynMethodCall",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7045,7 +7401,7 @@
         "shortname": "ajmca",
         "attribute": "allJoynMethodCallAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7058,7 +7414,7 @@
         "shortname": "ajpr",
         "attribute": "allJoynProperty",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7071,7 +7427,7 @@
         "shortname": "ajpra",
         "attribute": "allJoynPropertyAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7084,7 +7440,7 @@
         "shortname": "auds",
         "attribute": "authorizationDecision",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7097,7 +7453,7 @@
         "shortname": "aupy",
         "attribute": "authorizationPolicy",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7110,7 +7466,7 @@
         "shortname": "auif",
         "attribute": "authorizationInformation",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7123,7 +7479,7 @@
         "shortname": "ontr",
         "attribute": "ontologyRepository",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7136,7 +7492,7 @@
         "shortname": "ontra",
         "attribute": "ontologyRepositoryAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7149,7 +7505,7 @@
         "shortname": "ont",
         "attribute": "ontology",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7162,7 +7518,7 @@
         "shortname": "onta",
         "attribute": "ontologyAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7175,7 +7531,7 @@
         "shortname": "ontm",
         "attribute": "ontologyMapping",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7188,7 +7544,7 @@
         "shortname": "ontma",
         "attribute": "ontologyMappingAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7201,7 +7557,7 @@
         "shortname": "omal",
         "attribute": "ontologyMappingAlgorithm",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7214,7 +7570,7 @@
         "shortname": "omala",
         "attribute": "ontologyMappingAlgorithmAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7227,7 +7583,7 @@
         "shortname": "omar",
         "attribute": "ontologyMappingAlgorithmRepository",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7240,7 +7596,7 @@
         "shortname": "omara",
         "attribute": "ontologyMappingAlgorithmRepositoryAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7253,7 +7609,7 @@
         "shortname": "smjp",
         "attribute": "semanticMashupJobProfile",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7266,7 +7622,7 @@
         "shortname": "smjpa",
         "attribute": "semanticMashupJobProfileAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7279,7 +7635,7 @@
         "shortname": "smi",
         "attribute": "semanticMashupInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7292,7 +7648,7 @@
         "shortname": "smia",
         "attribute": "semanticMashupInstanceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7305,7 +7661,7 @@
         "shortname": "smr",
         "attribute": "semanticMashupResult",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7318,7 +7674,7 @@
         "shortname": "smra",
         "attribute": "semanticMashupResultAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7331,7 +7687,7 @@
         "shortname": "srr",
         "attribute": "semanticRuleRepository",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7344,7 +7700,7 @@
         "shortname": "srra",
         "attribute": "semanticRuleRepositoryAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7357,7 +7713,7 @@
         "shortname": "rrul",
         "attribute": "reasoningRules",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7370,7 +7726,7 @@
         "shortname": "rrula",
         "attribute": "reasoningRulesAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7383,7 +7739,7 @@
         "shortname": "rji",
         "attribute": "reasoningJobInstance",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7396,7 +7752,7 @@
         "shortname": "rjia",
         "attribute": "reasoningJobInstanceAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7409,7 +7765,7 @@
         "shortname": "alst",
         "attribute": "AEContactList",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7422,7 +7778,7 @@
         "shortname": "alpc",
         "attribute": "AEContactListPerCSE",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7435,7 +7791,7 @@
         "shortname": "lmg",
         "attribute": "localMulticastGroup",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7448,7 +7804,7 @@
         "shortname": "mms",
         "attribute": "multimediaSession",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7461,7 +7817,7 @@
         "shortname": "mmsa",
         "attribute": "multimediaSessionAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7474,7 +7830,7 @@
         "shortname": "tgr",
         "attribute": "triggerRequest",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7487,7 +7843,7 @@
         "shortname": "crs",
         "attribute": "crossResourceSubscription",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7500,7 +7856,7 @@
         "shortname": "bdt",
         "attribute": "backgroundDataTransfer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7513,7 +7869,7 @@
         "shortname": "trac",
         "attribute": "transaction",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7526,7 +7882,7 @@
         "shortname": "tram",
         "attribute": "transactionMgmt",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7539,7 +7895,7 @@
         "shortname": "eqs",
         "attribute": "e2eQosSession",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7552,7 +7908,7 @@
         "shortname": "tsb",
         "attribute": "timeSyncBeacon",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7565,7 +7921,7 @@
         "shortname": "nmr",
         "attribute": "nwMonitoringReq",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7578,7 +7934,7 @@
         "shortname": "prp",
         "attribute": "primitiveProfile",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7591,7 +7947,7 @@
         "shortname": "prpa",
         "attribute": "primitiveProfileAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7604,7 +7960,7 @@
         "shortname": "actr",
         "attribute": "action",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7617,7 +7973,7 @@
         "shortname": "actra",
         "attribute": "actionAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7630,7 +7986,7 @@
         "shortname": "depr",
         "attribute": "dependency",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7643,7 +7999,7 @@
         "shortname": "depra",
         "attribute": "dependencyAnnc",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -7875,8 +8231,8 @@
         "shortname": "lvl",
         "attribute": "level",
         "occursIn": [
-            "battery",
-            "filterCriteria"
+            "filterCriteria",
+            "battery"
         ],
         "categories": [
             "Resource Attributes",
@@ -8038,9 +8394,9 @@
         "attribute": "duration",
         "occursIn": [
             "batchNotify",
+            "missingData",
             "overcurrentSensor",
-            "recorder",
-            "missingData"
+            "recorder"
         ],
         "categories": [
             "Resource Attributes",
@@ -8055,8 +8411,8 @@
         "shortname": "sgn",
         "attribute": "notification",
         "occursIn": [
-            "aggregatedNotification",
-            "Request Primitive Content"
+            "Request Primitive Content",
+            "aggregatedNotification"
         ],
         "categories": [
             "Complex Data Types"
@@ -8222,19 +8578,6 @@
         ]
     },
     {
-        "shortname": "fc",
-        "attribute": "filterCriteria",
-        "occursIn": [
-            "IPEDiscoveryRequest"
-        ],
-        "categories": [
-            "Complex Data Types"
-        ],
-        "documents": [
-            "TS-0004-Service_Layer_Core_Protocol-V4_5_0.docx"
-        ]
-    },
-    {
         "shortname": "ops",
         "attribute": "operations",
         "occursIn": [
@@ -8253,10 +8596,10 @@
         "shortname": "ch",
         "attribute": "childResource",
         "occursIn": [
-            "All except execInstance",
-            "All",
+            "management resources from firmware",
             "announced resource",
-            "management resources from firmware"
+            "All except execInstance",
+            "All"
         ],
         "categories": [
             "Complex Data Types"
@@ -8270,8 +8613,8 @@
         "shortname": "acr",
         "attribute": "accessControlRule",
         "occursIn": [
-            "selfPrivileges",
-            "privileges"
+            "privileges",
+            "selfPrivileges"
         ],
         "categories": [
             "Complex Data Types"
@@ -8440,11 +8783,11 @@
         "shortname": "nm",
         "attribute": "name",
         "occursIn": [
-            "All",
-            "childResourceRef",
-            "attribute",
-            "anyArgType",
             "mgmtLinkRef",
+            "anyArgType",
+            "childResourceRef",
+            "All",
+            "attribute",
             "contentRef"
         ],
         "categories": [
@@ -8459,8 +8802,8 @@
         "shortname": "val",
         "attribute": "value",
         "occursIn": [
-            "All",
-            "attribute"
+            "attribute",
+            "All"
         ],
         "categories": [
             "Complex Data Types"
@@ -8475,9 +8818,9 @@
         "attribute": "type",
         "occursIn": [
             "All",
-            "childResourceRef",
-            "anyArgType",
             "mgmtLinkRef",
+            "anyArgType",
+            "childResourceRef",
             "location"
         ],
         "categories": [
@@ -8557,8 +8900,8 @@
         "shortname": "seci",
         "attribute": "securityInfo",
         "occursIn": [
-            "Request Primitive Content",
-            "Response Primitive Content"
+            "Response Primitive Content",
+            "Request Primitive Content"
         ],
         "categories": [
             "Complex Data Types"
@@ -8636,12 +8979,12 @@
         "shortname": "any",
         "attribute": "anyArg",
         "occursIn": [
-            "rebootArgsType",
-            "resetArgsType",
             "downloadArgsType",
-            "softwareInstallArgsType softwareUpdateArgsType",
-            "execReqArgsListType",
+            "resetArgsType",
             "softwareUninstallArgsType",
+            "execReqArgsListType",
+            "rebootArgsType",
+            "softwareInstallArgsType softwareUpdateArgsType",
             "uploadArgsType"
         ],
         "categories": [
@@ -8668,9 +9011,9 @@
         "shortname": "uri",
         "attribute": "URI",
         "occursIn": [
+            "dynAuthTokenReqInfo",
             "resourceWrapper",
-            "trustAnchorCred",
-            "dynAuthTokenReqInfo"
+            "trustAnchorCred"
         ],
         "categories": [
             "Complex Data Types",
@@ -8687,8 +9030,8 @@
         "occursIn": [
             "softwareUpdateArgsType",
             "uploadArgsType",
-            "softwareUninstallArgsType",
-            "downloadArgsType"
+            "downloadArgsType",
+            "softwareUninstallArgsType"
         ],
         "categories": [
             "Complex Data Types"
@@ -8703,8 +9046,8 @@
         "occursIn": [
             "softwareUpdateArgsType",
             "downloadArgsType",
-            "credentials",
             "softwareUninstallArgsType",
+            "credentials",
             "uploadArgsType"
         ],
         "categories": [
@@ -8785,8 +9128,8 @@
         "shortname": "cpt",
         "attribute": "completeTime",
         "occursIn": [
-            "MAFClientRegCfg",
             "MEFClientRegCfg",
+            "MAFClientRegCfg",
             "downloadArgsType"
         ],
         "categories": [
@@ -9117,8 +9460,8 @@
         "shortname": "ip4",
         "attribute": "ipv4Address",
         "occursIn": [
-            "ipAddress",
-            "dynAuthDasRequest"
+            "dynAuthDasRequest",
+            "ipAddress"
         ],
         "categories": [
             "Complex Data Types"
@@ -9131,8 +9474,8 @@
         "shortname": "ip6",
         "attribute": "ipv6Address",
         "occursIn": [
-            "ipAddress",
-            "dynAuthDasRequest"
+            "dynAuthDasRequest",
+            "ipAddress"
         ],
         "categories": [
             "Complex Data Types"
@@ -9262,8 +9605,8 @@
         "shortname": "dreq",
         "attribute": "dasRequest",
         "occursIn": [
-            "securityInfo",
-            "dynAuthTokenReqInfo"
+            "dynAuthTokenReqInfo",
+            "securityInfo"
         ],
         "categories": [
             "Complex Data Types"
@@ -9380,8 +9723,8 @@
         "shortname": "esri",
         "attribute": "esprimRandID",
         "occursIn": [
-            "receiverESPrimRandObject",
-            "originatorESPrimRandObject"
+            "originatorESPrimRandObject",
+            "receiverESPrimRandObject"
         ],
         "categories": [
             "Complex Data Types"
@@ -9394,8 +9737,8 @@
         "shortname": "esrv",
         "attribute": "esprimRandValue",
         "occursIn": [
-            "receiverESPrimRandObject",
-            "originatorESPrimRandObject"
+            "originatorESPrimRandObject",
+            "receiverESPrimRandObject"
         ],
         "categories": [
             "Complex Data Types"
@@ -9408,8 +9751,8 @@
         "shortname": "esrx",
         "attribute": "esprimRandExpiry",
         "occursIn": [
-            "receiverESPrimRandObject",
-            "originatorESPrimRandObject"
+            "originatorESPrimRandObject",
+            "receiverESPrimRandObject"
         ],
         "categories": [
             "Complex Data Types"
@@ -9448,8 +9791,8 @@
         "shortname": "espa",
         "attribute": "esprimProtocolAndAlgIDs",
         "occursIn": [
-            "receiverESPrimRandObject",
-            "originatorESPrimRandObject"
+            "originatorESPrimRandObject",
+            "receiverESPrimRandObject"
         ],
         "categories": [
             "Complex Data Types"
@@ -10062,7 +10405,7 @@
         "shortname": "tgp",
         "attribute": "triggerPayload (root element)",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Trigger Payload Fields"
@@ -10075,7 +10418,7 @@
         "shortname": "tio",
         "attribute": "triggerInfoOperation",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Trigger Payload Fields"
@@ -10088,7 +10431,7 @@
         "shortname": "tirt",
         "attribute": "triggerInfoResourceType",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Trigger Payload Fields"
@@ -10101,7 +10444,7 @@
         "shortname": "tipa",
         "attribute": "triggerInfoPoA",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Trigger Payload Fields"
@@ -10114,7 +10457,7 @@
         "shortname": "tist",
         "attribute": "triggerInfoSerializationTypes",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Trigger Payload Fields"
@@ -10361,8 +10704,8 @@
         "shortname": "fq",
         "attribute": "fqdn",
         "occursIn": [
-            "MAFClientRegCfg",
-            "MEFClientRegCfg"
+            "MEFClientRegCfg",
+            "MAFClientRegCfg"
         ],
         "categories": [
             "Common and Field Device Configuration"
@@ -10375,8 +10718,8 @@
         "shortname": "adfq",
         "attribute": "adminFQDN",
         "occursIn": [
-            "MAFClientRegCfg",
-            "MEFClientRegCfg"
+            "MEFClientRegCfg",
+            "MAFClientRegCfg"
         ],
         "categories": [
             "Common and Field Device Configuration"
@@ -10389,8 +10732,8 @@
         "shortname": "hpt",
         "attribute": "httpPort",
         "occursIn": [
-            "MAFClientRegCfg",
-            "MEFClientRegCfg"
+            "MEFClientRegCfg",
+            "MAFClientRegCfg"
         ],
         "categories": [
             "Common and Field Device Configuration"
@@ -10403,8 +10746,8 @@
         "shortname": "wpt",
         "attribute": "websocketPort",
         "occursIn": [
-            "MAFClientRegCfg",
-            "MEFClientRegCfg"
+            "MEFClientRegCfg",
+            "MAFClientRegCfg"
         ],
         "categories": [
             "Common and Field Device Configuration"
@@ -10417,7 +10760,7 @@
         "shortname": "dtdpr",
         "attribute": "Device3DPrinter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10430,7 +10773,7 @@
         "shortname": "deacr",
         "attribute": "deviceAirConditioner",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10443,7 +10786,7 @@
         "shortname": "deapr",
         "attribute": "deviceAirPurifier",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10456,7 +10799,7 @@
         "shortname": "daqmr",
         "attribute": "deviceAirQualityMonitor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10469,7 +10812,7 @@
         "shortname": "dearr",
         "attribute": "deviceAudioReceiver",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10482,7 +10825,7 @@
         "shortname": "dbpmr",
         "attribute": "deviceBloodPressureMonitor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10495,7 +10838,7 @@
         "shortname": "devca",
         "attribute": "deviceCamera",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10508,7 +10851,7 @@
         "shortname": "decdr",
         "attribute": "deviceClothesDryer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10521,7 +10864,7 @@
         "shortname": "decwr",
         "attribute": "deviceClothesWasher",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10534,7 +10877,7 @@
         "shortname": "dcwdr",
         "attribute": "deviceClothesWasherDryer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10547,7 +10890,7 @@
         "shortname": "decme",
         "attribute": "deviceCoffeeMachine",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10560,7 +10903,7 @@
         "shortname": "dechd",
         "attribute": "deviceCookerHood",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10573,7 +10916,7 @@
         "shortname": "devcp",
         "attribute": "deviceCooktop",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10586,7 +10929,7 @@
         "shortname": "devdr",
         "attribute": "deviceDehumidifier",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10599,7 +10942,7 @@
         "shortname": "dedwr",
         "attribute": "deviceDishWasher",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10612,7 +10955,7 @@
         "shortname": "devd0",
         "attribute": "deviceDoor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10625,7 +10968,7 @@
         "shortname": "dedlk",
         "attribute": "deviceDoorLock",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10638,7 +10981,7 @@
         "shortname": "devcr",
         "attribute": "deviceElectricVehicleCharger",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10651,7 +10994,7 @@
         "shortname": "devfn",
         "attribute": "deviceFan",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10664,7 +11007,7 @@
         "shortname": "defpe",
         "attribute": "deviceFoodProbe",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10677,7 +11020,7 @@
         "shortname": "devfr",
         "attribute": "deviceFreezer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10690,7 +11033,7 @@
         "shortname": "devgr",
         "attribute": "deviceGlucosemeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10703,7 +11046,7 @@
         "shortname": "dhrmr",
         "attribute": "deviceHeartRateMonitor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10716,7 +11059,7 @@
         "shortname": "dhcct",
         "attribute": "deviceHomeCCTV",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10729,7 +11072,7 @@
         "shortname": "devhr",
         "attribute": "deviceHumidifier",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10742,7 +11085,7 @@
         "shortname": "devke",
         "attribute": "deviceKettle",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10755,7 +11098,7 @@
         "shortname": "devlt",
         "attribute": "deviceLight",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10768,7 +11111,7 @@
         "shortname": "devmn",
         "attribute": "deviceMicrogeneration",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10781,7 +11124,7 @@
         "shortname": "dmfpr",
         "attribute": "deviceMultiFunctionPrinter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10794,7 +11137,7 @@
         "shortname": "deolp",
         "attribute": "deviceOutdoorLamp",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10807,7 +11150,7 @@
         "shortname": "devon",
         "attribute": "deviceOven",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10820,7 +11163,7 @@
         "shortname": "devpr",
         "attribute": "devicePrinter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10833,7 +11176,7 @@
         "shortname": "depor",
         "attribute": "devicePulseOximeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10846,7 +11189,7 @@
         "shortname": "devrr",
         "attribute": "deviceRefrigerator",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10859,7 +11202,7 @@
         "shortname": "dercr",
         "attribute": "deviceRobotCleaner",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10872,7 +11215,7 @@
         "shortname": "devsr",
         "attribute": "deviceScanner",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10885,7 +11228,7 @@
         "shortname": "despl",
         "attribute": "deviceSecurityPanel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10898,7 +11241,7 @@
         "shortname": "dstbx",
         "attribute": "deviceSetTopBox",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10911,7 +11254,7 @@
         "shortname": "dsemr",
         "attribute": "deviceSmartElectricMeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10924,7 +11267,7 @@
         "shortname": "despg",
         "attribute": "deviceSmartPlug",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10937,7 +11280,7 @@
         "shortname": "desct",
         "attribute": "deviceSteamCloset",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10950,7 +11293,7 @@
         "shortname": "desby",
         "attribute": "deviceStorageBattery",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10963,7 +11306,7 @@
         "shortname": "devsh",
         "attribute": "deviceSwitch",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10976,7 +11319,7 @@
         "shortname": "devtn",
         "attribute": "deviceTelevision",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -10989,7 +11332,7 @@
         "shortname": "devtr",
         "attribute": "deviceThermometer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11002,7 +11345,7 @@
         "shortname": "devtt",
         "attribute": "deviceThermostat",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11015,7 +11358,7 @@
         "shortname": "dewhr",
         "attribute": "deviceWaterHeater",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11028,7 +11371,7 @@
         "shortname": "dewve",
         "attribute": "deviceWaterValve",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11041,7 +11384,7 @@
         "shortname": "dwsab",
         "attribute": "deviceWeightScaleAndBodyCompositionAnalyser",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11054,7 +11397,7 @@
         "shortname": "dewse",
         "attribute": "deviceWindowShade",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11067,7 +11410,7 @@
         "shortname": "debwr",
         "attribute": "deviceBottleWarmer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11080,7 +11423,7 @@
         "shortname": "degdp",
         "attribute": "deviceGarbageDisposal",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11093,7 +11436,7 @@
         "shortname": "dewpr",
         "attribute": "deviceWaterPurifier",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11106,7 +11449,7 @@
         "shortname": "flene",
         "attribute": "flexNode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11119,7 +11462,7 @@
         "shortname": "cuff",
         "attribute": "cuff",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11132,7 +11475,7 @@
         "shortname": "powot",
         "attribute": "powerOutlet",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11145,7 +11488,7 @@
         "shortname": "sudcf",
         "attribute": "subDeviceCuff",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11158,7 +11501,7 @@
         "shortname": "sdpot",
         "attribute": "subDevicePowerOutlet",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11171,7 +11514,7 @@
         "shortname": "danio",
         "attribute": "dmAreaNwkInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11184,7 +11527,7 @@
         "shortname": "thdpr",
         "attribute": "3DPrinter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11197,7 +11540,7 @@
         "shortname": "acosr",
         "attribute": "acousticSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11210,7 +11553,7 @@
         "shortname": "acom0",
         "attribute": "airCleanOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11223,7 +11566,7 @@
         "shortname": "acjme",
         "attribute": "airConJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11236,7 +11579,7 @@
         "shortname": "acome",
         "attribute": "airConOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11249,7 +11592,7 @@
         "shortname": "airfw",
         "attribute": "airFlow",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11262,7 +11605,7 @@
         "shortname": "apjme",
         "attribute": "airPurifierJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11275,7 +11618,7 @@
         "shortname": "apome",
         "attribute": "airPurifierOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11288,7 +11631,7 @@
         "shortname": "aiqsr",
         "attribute": "airQualitySensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11301,7 +11644,7 @@
         "shortname": "alasr",
         "attribute": "alarmSpeaker",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11314,7 +11657,7 @@
         "shortname": "audve",
         "attribute": "audioVolume",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11327,7 +11670,7 @@
         "shortname": "audfr",
         "attribute": "autoDocumentFeeder",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11340,7 +11683,7 @@
         "shortname": "binot",
         "attribute": "binaryObject",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11353,7 +11696,7 @@
         "shortname": "binsh",
         "attribute": "binarySwitch",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11366,7 +11709,7 @@
         "shortname": "beias",
         "attribute": "bioElectricalImpedanceAnalysis",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11379,7 +11722,7 @@
         "shortname": "bocar",
         "attribute": "bodyCompositionAnalyser",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11392,7 +11735,7 @@
         "shortname": "boilr",
         "attribute": "boiler",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11405,7 +11748,7 @@
         "shortname": "boish",
         "attribute": "boilingSwitch",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11418,7 +11761,7 @@
         "shortname": "brewg",
         "attribute": "brewing",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11431,7 +11774,7 @@
         "shortname": "bresh",
         "attribute": "brewingSwitch",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11444,12 +11787,12 @@
         "shortname": "brigs",
         "attribute": "brightness",
         "occursIn": [
-            "brightness",
-            "n/a"
+            "sbu",
+            "brightness"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -11459,7 +11802,7 @@
         "shortname": "chanl",
         "attribute": "channel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11472,7 +11815,7 @@
         "shortname": "clock",
         "attribute": "clock",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11485,7 +11828,7 @@
         "shortname": "cdjme",
         "attribute": "clothesDryerJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11498,7 +11841,7 @@
         "shortname": "cdome",
         "attribute": "clothesDryerOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11511,7 +11854,7 @@
         "shortname": "cwdjm",
         "attribute": "clothesWasherDryerJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11524,7 +11867,7 @@
         "shortname": "cwdom",
         "attribute": "clothesWasherDryerOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11537,7 +11880,7 @@
         "shortname": "cwjme",
         "attribute": "clothesWasherJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11550,7 +11893,7 @@
         "shortname": "cwjmo",
         "attribute": "clothesWasherJobModeOption",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11563,7 +11906,7 @@
         "shortname": "cwome",
         "attribute": "clothesWasherOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11576,7 +11919,7 @@
         "shortname": "color",
         "attribute": "colour",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11590,11 +11933,11 @@
         "attribute": "colourSaturation",
         "occursIn": [
             "colourSaturation",
-            "n/a"
+            "sbu"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -11604,7 +11947,7 @@
         "shortname": "coplk",
         "attribute": "controlPanelLock",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11617,7 +11960,7 @@
         "shortname": "chjme",
         "attribute": "cookerHoodJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11630,7 +11973,7 @@
         "shortname": "creds",
         "attribute": "credentials",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11643,7 +11986,7 @@
         "shortname": "custe",
         "attribute": "customTemperature",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11656,7 +11999,7 @@
         "shortname": "dejme",
         "attribute": "dehumidifierJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11669,7 +12012,7 @@
         "shortname": "deome",
         "attribute": "dehumidifierOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11682,7 +12025,7 @@
         "shortname": "dwjme",
         "attribute": "dishWasherJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11695,7 +12038,7 @@
         "shortname": "dmagt",
         "attribute": "dmAgent",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11708,7 +12051,7 @@
         "shortname": "dando",
         "attribute": "dmAreaNwkDeviceInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11721,7 +12064,7 @@
         "shortname": "dmcay",
         "attribute": "dmCapability",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11734,7 +12077,7 @@
         "shortname": "ddmio",
         "attribute": "dmDataModelIO",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11747,7 +12090,7 @@
         "shortname": "dmdio",
         "attribute": "dmDeviceInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11760,7 +12103,7 @@
         "shortname": "dmelg",
         "attribute": "dmEventLog",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11773,7 +12116,7 @@
         "shortname": "dmfie",
         "attribute": "dmFirmware",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11786,7 +12129,7 @@
         "shortname": "dmpae",
         "attribute": "dmPackage",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11799,7 +12142,7 @@
         "shortname": "dmsoe",
         "attribute": "dmSoftware",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11812,7 +12155,7 @@
         "shortname": "dmste",
         "attribute": "dmStorage",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11825,7 +12168,7 @@
         "shortname": "doolk",
         "attribute": "doorLock",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11838,7 +12181,7 @@
         "shortname": "doork",
         "attribute": "doorlock",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11851,7 +12194,7 @@
         "shortname": "dooss",
         "attribute": "doorStatus",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11864,7 +12207,7 @@
         "shortname": "elvcr",
         "attribute": "electricVehicleConnector",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11877,7 +12220,7 @@
         "shortname": "enecn",
         "attribute": "energyConsumption",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11890,7 +12233,7 @@
         "shortname": "enegn",
         "attribute": "energyGeneration",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11903,7 +12246,7 @@
         "shortname": "faudn",
         "attribute": "faultDetection",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11916,7 +12259,7 @@
         "shortname": "filio",
         "attribute": "filterInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11929,7 +12272,7 @@
         "shortname": "foamg",
         "attribute": "foaming",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11942,7 +12285,7 @@
         "shortname": "frite",
         "attribute": "fridgeTemperature",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11955,7 +12298,7 @@
         "shortname": "frote",
         "attribute": "frozenTemperature",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11968,7 +12311,7 @@
         "shortname": "geoln",
         "attribute": "geoLocation",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11981,7 +12324,7 @@
         "shortname": "glucr",
         "attribute": "glucometer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -11994,7 +12337,7 @@
         "shortname": "grinr",
         "attribute": "grinder",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12007,7 +12350,7 @@
         "shortname": "heaze",
         "attribute": "heatingZone",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12020,12 +12363,12 @@
         "shortname": "heigt",
         "attribute": "height",
         "occursIn": [
-            "n/a",
+            "sbu",
             "height"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12035,7 +12378,7 @@
         "shortname": "howsy",
         "attribute": "hotWaterSupply",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12048,7 +12391,7 @@
         "shortname": "impsr",
         "attribute": "impactSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12061,7 +12404,7 @@
         "shortname": "keewm",
         "attribute": "keepWarm",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12074,7 +12417,7 @@
         "shortname": "keypd",
         "attribute": "keypad",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12087,12 +12430,12 @@
         "shortname": "liqll",
         "attribute": "liquidLevel",
         "occursIn": [
-            "n/a",
+            "sbu",
             "liquidLevel"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12103,11 +12446,11 @@
         "attribute": "liquidRemaining",
         "occursIn": [
             "liquidRemaining",
-            "n/a"
+            "sbu"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12117,12 +12460,12 @@
         "shortname": "lock",
         "attribute": "lock",
         "occursIn": [
-            "n/a",
+            "sbu",
             "lock"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12132,7 +12475,7 @@
         "shortname": "medit",
         "attribute": "mediaInput",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12145,7 +12488,7 @@
         "shortname": "medot",
         "attribute": "mediaOutput",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12158,7 +12501,7 @@
         "shortname": "medst",
         "attribute": "mediaSelect",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12171,7 +12514,7 @@
         "shortname": "milfg",
         "attribute": "milkFoaming",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12184,7 +12527,7 @@
         "shortname": "milqy",
         "attribute": "milkQuantity",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12197,7 +12540,7 @@
         "shortname": "milss",
         "attribute": "milkStatus",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12210,7 +12553,7 @@
         "shortname": "motsr",
         "attribute": "motionSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12223,12 +12566,12 @@
         "shortname": "numve",
         "attribute": "numberValue",
         "occursIn": [
-            "numberValue",
-            "n/a"
+            "sbu",
+            "numberValue"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12238,12 +12581,12 @@
         "shortname": "opell",
         "attribute": "openLevel",
         "occursIn": [
-            "openLevel",
-            "n/a"
+            "sbu",
+            "openLevel"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12253,7 +12596,7 @@
         "shortname": "opeme",
         "attribute": "operationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12266,7 +12609,7 @@
         "shortname": "ovesr",
         "attribute": "overcurrentSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12279,7 +12622,7 @@
         "shortname": "oximr",
         "attribute": "oximeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12292,7 +12635,7 @@
         "shortname": "ozomr",
         "attribute": "ozoneMeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12305,7 +12648,7 @@
         "shortname": "phocl",
         "attribute": "phoneCall",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12318,7 +12661,7 @@
         "shortname": "placl",
         "attribute": "playerControl",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12331,7 +12674,7 @@
         "shortname": "pows0",
         "attribute": "powerSave",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12344,7 +12687,7 @@
         "shortname": "prrse",
         "attribute": "printerRunState",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12357,7 +12700,7 @@
         "shortname": "priqe",
         "attribute": "printQueue",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12370,7 +12713,7 @@
         "shortname": "pulsr",
         "attribute": "pulsemeter",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12383,7 +12726,7 @@
         "shortname": "pusbn",
         "attribute": "pushButton",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12396,7 +12739,7 @@
         "shortname": "recor",
         "attribute": "recorder",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12409,7 +12752,7 @@
         "shortname": "refrn",
         "attribute": "refrigeration",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12422,12 +12765,12 @@
         "shortname": "relhy",
         "attribute": "relativeHumidity",
         "occursIn": [
-            "relativeHumidity",
-            "n/a"
+            "sbu",
+            "relativeHumidity"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12437,7 +12780,7 @@
         "shortname": "recee",
         "attribute": "remoteControlEnable",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12450,7 +12793,7 @@
         "shortname": "rcjme",
         "attribute": "robotCleanerJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12463,7 +12806,7 @@
         "shortname": "rcome",
         "attribute": "robotCleanerOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12476,7 +12819,7 @@
         "shortname": "runse",
         "attribute": "runState",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12489,7 +12832,7 @@
         "shortname": "scrse",
         "attribute": "scannerRunState",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12502,7 +12845,7 @@
         "shortname": "secme",
         "attribute": "securityMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12515,7 +12858,7 @@
         "shortname": "sesdn",
         "attribute": "sessionDescription",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12528,7 +12871,7 @@
         "shortname": "sigsh",
         "attribute": "signalStrength",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12541,7 +12884,7 @@
         "shortname": "sletr",
         "attribute": "sleepTimer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12554,7 +12897,7 @@
         "shortname": "smosr",
         "attribute": "smokeSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12567,7 +12910,7 @@
         "shortname": "sphyr",
         "attribute": "sphygmomanometer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12580,7 +12923,7 @@
         "shortname": "spill",
         "attribute": "spinLevel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12593,7 +12936,7 @@
         "shortname": "scjme",
         "attribute": "steamClosetJobMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12606,7 +12949,7 @@
         "shortname": "scome",
         "attribute": "steamClosetOperationMode",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12619,7 +12962,7 @@
         "shortname": "telcl",
         "attribute": "televisionChannel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12632,12 +12975,12 @@
         "shortname": "tempe",
         "attribute": "temperature",
         "occursIn": [
-            "temperatureAlarm",
-            "n/a"
+            "sbu",
+            "temperatureAlarm"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12647,7 +12990,7 @@
         "shortname": "temam",
         "attribute": "temperatureAlarm",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12661,11 +13004,11 @@
         "attribute": "textMessage",
         "occursIn": [
             "textMessage",
-            "n/a"
+            "sbu"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12675,7 +13018,7 @@
         "shortname": "timer",
         "attribute": "timer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12688,7 +13031,7 @@
         "shortname": "turbo",
         "attribute": "turbo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12701,7 +13044,7 @@
         "shortname": "uvesr",
         "attribute": "uvSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12714,7 +13057,7 @@
         "shortname": "wafio",
         "attribute": "waterFilterInfo",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12727,7 +13070,7 @@
         "shortname": "watfw",
         "attribute": "waterFlow",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12740,7 +13083,7 @@
         "shortname": "watsr",
         "attribute": "waterSensor",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12753,7 +13096,7 @@
         "shortname": "watss",
         "attribute": "waterStatus",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12766,12 +13109,12 @@
         "shortname": "weigt",
         "attribute": "weight",
         "occursIn": [
-            "n/a",
+            "sbu",
             "weight"
         ],
         "categories": [
-            "Resource Types",
-            "Resource Attributes"
+            "Resource Attributes",
+            "Resource Types"
         ],
         "documents": [
             "TS-0023-SDT_based_Information_Model_and_Mapping_for_Vertical_Industries-V4_7_1.docx"
@@ -12781,7 +13124,7 @@
         "shortname": "actie",
         "attribute": "activate",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12794,7 +13137,7 @@
         "shortname": "acctr",
         "attribute": "activateClockTimer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12807,7 +13150,7 @@
         "shortname": "answr",
         "attribute": "answer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12820,7 +13163,7 @@
         "shortname": "call",
         "attribute": "call",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12833,7 +13176,7 @@
         "shortname": "close",
         "attribute": "close",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12846,7 +13189,7 @@
         "shortname": "deace",
         "attribute": "deactivate",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12859,7 +13202,7 @@
         "shortname": "dectr",
         "attribute": "deactivateClockTimer",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12872,7 +13215,7 @@
         "shortname": "denve",
         "attribute": "decrementNumberValue",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12885,7 +13228,7 @@
         "shortname": "deppe",
         "attribute": "deployPackage",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12898,7 +13241,7 @@
         "shortname": "disae",
         "attribute": "disable",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12911,7 +13254,7 @@
         "shortname": "dowcl",
         "attribute": "downChannel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12924,7 +13267,7 @@
         "shortname": "dowve",
         "attribute": "downVolume",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12937,7 +13280,7 @@
         "shortname": "enabe",
         "attribute": "enable",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12950,7 +13293,7 @@
         "shortname": "formt",
         "attribute": "format",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12963,7 +13306,7 @@
         "shortname": "hangp",
         "attribute": "hangup",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12976,7 +13319,7 @@
         "shortname": "innve",
         "attribute": "incrementNumberValue",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -12989,7 +13332,7 @@
         "shortname": "instl",
         "attribute": "install",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13002,7 +13345,7 @@
         "shortname": "nextk",
         "attribute": "nextTrack",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13015,7 +13358,7 @@
         "shortname": "open",
         "attribute": "open",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13028,7 +13371,7 @@
         "shortname": "pretk",
         "attribute": "previousTrack",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13041,7 +13384,7 @@
         "shortname": "rebot",
         "attribute": "reboot",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13054,7 +13397,7 @@
         "shortname": "reaio",
         "attribute": "readIO",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13067,7 +13410,7 @@
         "shortname": "renve",
         "attribute": "resetNumberValue",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13080,7 +13423,7 @@
         "shortname": "retme",
         "attribute": "resetTextMessage",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13093,7 +13436,7 @@
         "shortname": "stadt",
         "attribute": "start3Dprint",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13106,7 +13449,7 @@
         "shortname": "stodt",
         "attribute": "stop3Dprint",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13119,7 +13462,7 @@
         "shortname": "togge",
         "attribute": "toggle",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13132,7 +13475,7 @@
         "shortname": "uninl",
         "attribute": "uninstall",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13145,7 +13488,7 @@
         "shortname": "unmot",
         "attribute": "unmount",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13158,7 +13501,7 @@
         "shortname": "uphcl",
         "attribute": "upChannel",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13171,7 +13514,7 @@
         "shortname": "updfe",
         "attribute": "updateFirmware",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13184,7 +13527,7 @@
         "shortname": "upove",
         "attribute": "upVolume",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13197,7 +13540,7 @@
         "shortname": "wriio",
         "attribute": "writeIO",
         "occursIn": [
-            "n/a"
+            "sbu"
         ],
         "categories": [
             "Resource Types"
@@ -13262,8 +13605,8 @@
         "shortname": "volte",
         "attribute": "voltage",
         "occursIn": [
-            "battery",
-            "energyConsumption"
+            "energyConsumption",
+            "battery"
         ],
         "categories": [
             "Resource Attributes"
@@ -13341,10 +13684,10 @@
         "shortname": "alarm",
         "attribute": "alarm",
         "occursIn": [
-            "temperatureAlarm",
             "smokeSensor",
+            "motionSensor",
             "waterSensor",
-            "motionSensor"
+            "temperatureAlarm"
         ],
         "categories": [
             "Resource Attributes"
@@ -13865,16 +14208,16 @@
         "shortname": "cujme",
         "attribute": "currentJobMode",
         "occursIn": [
-            "airPurifierJobMode",
-            "steamClosetJobMode",
-            "robotCleanerJobMode",
-            "clothesWasherJobMode",
-            "clothesWasherDryerJobMode",
-            "clothesDryerJobMode",
             "airConJobMode",
             "dishWasherJobMode",
+            "airPurifierJobMode",
+            "robotCleanerJobMode",
+            "steamClosetJobMode",
+            "dehumidifierJobMode",
+            "clothesWasherJobMode",
             "cookerHoodJobMode",
-            "dehumidifierJobMode"
+            "clothesDryerJobMode",
+            "clothesWasherDryerJobMode"
         ],
         "categories": [
             "Resource Attributes"
@@ -13887,16 +14230,16 @@
         "shortname": "cjmne",
         "attribute": "currentJobModeName",
         "occursIn": [
-            "airPurifierJobMode",
-            "steamClosetJobMode",
-            "robotCleanerJobMode",
-            "clothesWasherJobMode",
-            "clothesWasherDryerJobMode",
-            "clothesDryerJobMode",
             "airConJobMode",
             "dishWasherJobMode",
+            "airPurifierJobMode",
+            "robotCleanerJobMode",
+            "steamClosetJobMode",
+            "dehumidifierJobMode",
+            "clothesWasherJobMode",
             "cookerHoodJobMode",
-            "dehumidifierJobMode"
+            "clothesDryerJobMode",
+            "clothesWasherDryerJobMode"
         ],
         "categories": [
             "Resource Attributes"
@@ -14039,8 +14382,8 @@
         "shortname": "defve",
         "attribute": "defaultValue",
         "occursIn": [
-            "numberValue",
-            "textMessage"
+            "textMessage",
+            "numberValue"
         ],
         "categories": [
             "Resource Attributes"
@@ -14079,8 +14422,8 @@
         "shortname": "dette",
         "attribute": "detectedTime",
         "occursIn": [
-            "overcurrentSensor",
-            "smokeSensor"
+            "smokeSensor",
+            "overcurrentSensor"
         ],
         "categories": [
             "Resource Attributes"
@@ -14483,15 +14826,15 @@
         "shortname": "jobms",
         "attribute": "jobModes",
         "occursIn": [
-            "airPurifierJobMode",
-            "",
-            "clothesWasherJobMode",
-            "clothesWasherDryerJobMode",
-            "robotCleanerJobMode steamClosetJobMode",
             "airConJobMode",
             "dishWasherJobMode",
+            "",
+            "airPurifierJobMode",
+            "dehumidifierJobMode",
+            "clothesWasherJobMode",
             "cookerHoodJobMode",
-            "dehumidifierJobMode"
+            "robotCleanerJobMode steamClosetJobMode",
+            "clothesWasherDryerJobMode"
         ],
         "categories": [
             "Resource Attributes"
@@ -14738,10 +15081,10 @@
         "shortname": "maxve",
         "attribute": "maxValue",
         "occursIn": [
-            "numberValue",
+            "ozoneMeter",
             "temperature",
-            "audioVolume",
-            "ozoneMeter"
+            "numberValue",
+            "audioVolume"
         ],
         "categories": [
             "Resource Attributes"
@@ -14884,8 +15227,8 @@
         "shortname": "minve",
         "attribute": "minValue",
         "occursIn": [
-            "numberValue",
-            "temperature"
+            "temperature",
+            "numberValue"
         ],
         "categories": [
             "Resource Attributes"
@@ -14950,8 +15293,8 @@
         "shortname": "mulfs",
         "attribute": "multiplyingFactors",
         "occursIn": [
-            "energyGeneration",
-            "energyConsumption"
+            "energyConsumption",
+            "energyGeneration"
         ],
         "categories": [
             "Resource Attributes"
@@ -15003,8 +15346,8 @@
         "shortname": "name",
         "attribute": "name",
         "occursIn": [
-            "deployPackage",
             "dmPackage",
+            "deployPackage",
             "dmSoftware"
         ],
         "categories": [
@@ -15773,8 +16116,8 @@
         "shortname": "sigds",
         "attribute": "significantDigits",
         "occursIn": [
-            "energyGeneration",
-            "energyConsumption"
+            "energyConsumption",
+            "energyGeneration"
         ],
         "categories": [
             "Resource Attributes"
@@ -15931,8 +16274,8 @@
         "attribute": "state",
         "occursIn": [
             "dmPackage",
-            "dmSoftware",
-            "dmAgent"
+            "dmAgent",
+            "dmSoftware"
         ],
         "categories": [
             "Resource Attributes"
@@ -15972,8 +16315,8 @@
         "attribute": "stepValue",
         "occursIn": [
             "temperature",
-            "openLevel",
-            "audioVolume"
+            "audioVolume",
+            "openLevel"
         ],
         "categories": [
             "Resource Attributes"
@@ -16338,8 +16681,8 @@
         "attribute": "url",
         "occursIn": [
             "dmPackage",
-            "dmSoftware",
-            "sessionDescription"
+            "sessionDescription",
+            "dmSoftware"
         ],
         "categories": [
             "Resource Attributes"
@@ -16391,11 +16734,11 @@
         "shortname": "versn",
         "attribute": "version",
         "occursIn": [
-            "deployPackage",
-            "update",
             "dmPackage",
+            "dmSoftware",
+            "deployPackage",
             "updateFirmware",
-            "dmSoftware"
+            "update"
         ],
         "categories": [
             "Resource Attributes",
@@ -16513,8 +16856,8 @@
         "shortname": "addrs",
         "attribute": "address",
         "occursIn": [
-            "writeIO",
-            "readIO"
+            "readIO",
+            "writeIO"
         ],
         "categories": [
             "Action Arguments"
@@ -16553,8 +16896,8 @@
         "shortname": "resut",
         "attribute": "result",
         "occursIn": [
-            "writeIO",
-            "readIO"
+            "readIO",
+            "writeIO"
         ],
         "categories": [
             "Action Return Values"

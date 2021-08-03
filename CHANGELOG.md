@@ -8,7 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [1.2.0] - 2021-xx-xx
+## [1.2.1] - 2021-08-02
+
+### Changed
+- Improved support for Alfred's Universal Actions.
+- Reduced the workflow titles lengths.
+
+
+## [1.2.0] - 2021-07-21
 
 ### Added
 - Added search for oneM2M's response status codes (keyword: rsc)

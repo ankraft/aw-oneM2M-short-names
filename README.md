@@ -36,6 +36,10 @@ The workflow by default expects ```jq``` in the directory ```/usr/local/bin```, 
 	- Alt: show detailed http status code
 	- Cmd: show detailed CoAP response code
 
+### Alfred Universal Actions
+
+This workflow supports *Alfred's Universal Actions*. Just mark a short name, attribute, or result status code in your text and hit the Akfred's *selection hotkey*.
+
 
 ## Updating Attribute Mappings and Response Status Codes
 

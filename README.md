@@ -38,7 +38,7 @@ The workflow by default expects ```jq``` in the directory ```/usr/local/bin```, 
 
 ### Alfred Universal Actions
 
-This workflow supports *Alfred's Universal Actions*. Just mark a short name, attribute, or result status code in your text and hit the Akfred's *selection hotkey*.
+This workflow supports *Alfred's Universal Actions*. Just mark a short name, attribute, or result status code in your text and hit the Alfred's *selection hotkey*.
 
 
 ## Updating Attribute Mappings and Response Status Codes

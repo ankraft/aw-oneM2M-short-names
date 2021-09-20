@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Corrected missing http/coap for UPDATED RSC.
 
 ## Changed
-- Updated to the latest of the attributes file.
+- Updated to the latest version of the attributes file.
 
 
 ## [1.2.1] - 2021-08-02

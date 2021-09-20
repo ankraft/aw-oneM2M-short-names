@@ -25,6 +25,7 @@ The workflow by default expects ```jq``` in the directory ```/usr/local/bin```, 
 ### sn : Attributes and short names
 - Alfred keyword trigger in Alfred: ```sn```
 - Pressing ```return``` copies both the long and the short name to the clipboard.
+- Pressing ```Ctrl-return``` copies only the long name to the clipboard.
 - Modifier keys for the search result:
 	- Alt: show attribute categories
 	- Cmd: show documents where an attribute is defined

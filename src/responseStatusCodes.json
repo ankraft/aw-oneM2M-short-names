@@ -39,7 +39,8 @@
 	},
 	{	"rsc": 2004,
 		"description": "UPDATED",
-		"http": "2.04 (Changed)",
+		"http": "200 (OK)",
+		"coap": "2.04 (Changed)",
 		"class": "Successful response"
 	},
 

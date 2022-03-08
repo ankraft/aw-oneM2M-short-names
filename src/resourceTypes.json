@@ -1,0 +1,407 @@
+[
+	{	"type": 0,
+		"resource": "mixed",
+		"shortname": "A mixture of all the resource types (except mixed itself).",
+		"note": "A mixture of all the resource types (except mixed itself)."
+	},
+	{	"type": 1,
+		"resource": "accessControlPolicy",
+		"shortname": "acp"
+	},
+	{	"type": 2,
+		"resource": "AE",
+		"shortname": "ae"
+	},
+	{	"type": 3,
+		"resource": "container",
+		"shortname": "cnt"
+	},
+	{	"type": 4,
+		"resource": "contentInstance",
+		"shortname": "cin"
+	},
+	{	"type": 5,
+		"resource": "CSEBase",
+		"shortname": "cb"
+	},
+	{	"type": 6,
+		"resource": "delivery",
+		"shortname": "dlv"
+	},
+	{	"type": 7,
+		"resource": "eventConfig",
+		"shortname": "evcg"
+	},
+	{	"type": 8,
+		"resource": "execInstance",
+		"shortname": "exin"
+	},
+	{	"type": 9,
+		"resource": "group",
+		"shortname": "grp"
+	},
+	{	"type": 10,
+		"resource": "locationPolicy",
+		"shortname": "lcp"
+	},
+	{	"type": 11,
+		"resource": "m2mServiceSubscription",
+		"shortname": "mssp"
+	},
+	{	"type": 12,
+		"resource": "mgmtCmd",
+		"shortname": "mgc"
+	},
+	{	"type": 13,
+		"resource": "mgmtObj",
+		"shortname": "undefined"
+	},
+	{	"type": 14,
+		"resource": "node",
+		"shortname": "nod"
+	},
+	{	"type": 15,
+		"resource": "pollingChannel",
+		"shortname": "pch"
+	},
+	{	"type": 16,
+		"resource": "remoteCSE",
+		"shortname": "csr"
+	},
+	{	"type": 17,
+		"resource": "request",
+		"shortname": "req"
+	},
+	{	"type": 18,
+		"resource": "schedule",
+		"shortname": "sch"
+	},
+	{	"type": 19,
+		"resource": "serviceSubscribedAppRule",
+		"shortname": "asar"
+	},
+	{	"type": 20,
+		"resource": "serviceSubscribedNode",
+		"shortname": "svsn"
+	},
+	{	"type": 21,
+		"resource": "statsCollect",
+		"shortname": "stcl"
+	},
+	{	"type": 22,
+		"resource": "statsConfig",
+		"shortname": "stcg"
+	},
+	{	"type": 23,
+		"resource": "subscription",
+		"shortname": "sub"
+	},
+	{	"type": 24,
+		"resource": "semanticDescriptor",
+		"shortname": "smd"
+	},
+	{	"type": 25,
+		"resource": "notificationTargetMgmtPolicyRef",
+		"shortname": "ntpr"
+	},
+	{	"type": 26,
+		"resource": "notificationTargetPolicy",
+		"shortname": "ntp"
+	},
+	{	"type": 27,
+		"resource": "policyDeletionRules",
+		"shortname": "pdr"
+	},
+	{	"type": 28,
+		"resource": "flexContainer",
+		"shortname": "undefined"
+	},
+	{	"type": 29,
+		"resource": "timeSeries",
+		"shortname": "ts"
+	},
+	{	"type": 30,
+		"resource": "timeSeriesInstance",
+		"shortname": "tsi"
+	},
+	{	"type": 31,
+		"resource": "role",
+		"shortname": "rol"
+	},	
+	{	"type": 32,
+		"resource": "token",
+		"shortname": "tk"
+	},
+	{	"type": 34,
+		"resource": "dynamicAuthorizationConsultation",
+		"shortname": "dac"
+	},
+	{	"type": 35,
+		"resource": "authorizationDecision",
+		"shortname": "auds"
+	},
+	{	"type": 36,
+		"resource": "authorizationPolicy",
+		"shortname": "aupy"
+	},
+	{	"type": 37,
+		"resource": "authorizationInformation",
+		"shortname": "auif"
+	},
+	{	"type": 38,
+		"resource": "ontologyRepository",
+		"shortname": "ontr"
+	},
+	{	"type": 39,
+		"resource": "ontology",
+		"shortname": "ont"
+	},
+	{	"type": 40,
+		"resource": "semanticMashupJobProfile",
+		"shortname": "smjp"
+	},
+	{	"type": 41,
+		"resource": "semanticMashupInstance",
+		"shortname": "smi"
+	},
+	{	"type": 42,
+		"resource": "semanticMashupResult",
+		"shortname": "smr"
+	},
+	{	"type": 43,
+		"resource": "AEContactList",
+		"shortname": "alst"
+	},
+	{	"type": 44,
+		"resource": "AEContactListPerCSE",
+		"shortname": "alpc"
+	},
+	{	"type": 45,
+		"resource": "localMulticastGroup",
+		"shortname": "lmg"
+	},
+	{	"type": 46,
+		"resource": "multimediaSession",
+		"shortname": "mms"
+	},
+	{	"type": 47,
+		"resource": "triggerRequest",
+		"shortname": "tgr"
+	},
+	{	"type": 48,
+		"resource": "crossResourceSubscription",
+		"shortname": "crs"
+	},
+	{	"type": 49,
+		"resource": "backgroundDataTransfer",
+		"shortname": "bdt"
+	},
+	{	"type": 50,
+		"resource": "transactionMgmt",
+		"shortname": "tram"
+	},
+	{	"type": 51,
+		"resource": "transaction",
+		"shortname": "trac"
+	},
+	{	"type": 52,
+		"resource": "ontologyMapping",
+		"shortname": "ontm"
+	},
+	{	"type": 53,
+		"resource": "ontologyMappingAlgorithm",
+		"shortname": "omal"
+	},
+	{	"type": 54,
+		"resource": "ontologyMappingAlgorithmRepository",
+		"shortname": "omar"
+	},
+	{	"type": 55,
+		"resource": "reasoningJobInstance",
+		"shortname": "rji"
+	},
+	{	"type": 56,
+		"resource": "reasoningRules",
+		"shortname": "rrul"
+	},
+	{	"type": 57,
+		"resource": "semanticRuleRepository",
+		"shortname": "srr"
+	},
+	{	"type": 58,
+		"resource": "flexContainerInstance"
+	},
+	{	"type": 59,
+		"resource": "e2eQosSession",
+		"shortname": "eqs"
+	},
+	{	"type": 60,
+		"resource": "timeSyncBeacon",
+		"shortname": "tsb"
+	},
+	{	"type": 61,
+		"resource": "nwMonitoringReq",
+		"shortname": "nmr"
+	},
+	{	"type": 62,
+		"resource": "primitiveProfile",
+		"shortname": "prp"
+	},
+	{	"type": 63,
+		"resource": "processManagement",
+		"shortname": "prmr"
+	},
+	{	"type": 64,
+		"resource": "state",
+		"shortname": "stte"
+	},
+	{	"type": 65,
+		"resource": "action",
+		"shortname": "actr"
+	},
+	{	"type": 66,
+		"resource": "dependency",
+		"shortname": "depr"
+	},
+	{	"type": 67,
+		"resource": "serviceSubscribedUserProfile",
+		"shortname": "ssup"
+	},
+	{	"type": 68,
+		"resource": "softwareCampaign",
+		"shortname": "swcm"
+	},
+	{	"type": 10001,
+		"resource": "accessControlPolicyAnnc",
+		"shortname": "acpa"
+	},
+	{	"type": 10002,
+		"resource": "AEAnnc",
+		"shortname": "aeA"
+	},
+	{	"type": 10003,
+		"resource": "containerAnnc",
+		"shortname": "cntA"
+	},
+	{	"type": 10004,
+		"resource": "contentInstanceAnnc",
+		"shortname": "cinA"
+	},
+	{	"type": 10009,
+		"resource": "groupAnnc",
+		"shortname": "grpA"
+	},
+	{	"type": 10010,
+		"resource": "locationPolicyAnnc",
+		"shortname": "lcpA"
+	},
+	{	"type": 10013,
+		"resource": "mgmtObjAnnc",
+		"shortname": "undefined"
+	},
+	{	"type": 10014,
+		"resource": "nodeAnnc",
+		"shortname": "nodA"
+	},
+	{	"type": 10016,
+		"resource": "remoteCSEAnnc",
+		"shortname": "csrA"
+	},
+	{	"type": 10018,
+		"resource": "scheduleAnnc",
+		"shortname": "schA"
+	},
+	{	"type": 10024,
+		"resource": "semanticDescriptorAnnc",
+		"shortname": "smdA"
+	},
+	{	"type": 10028,
+		"resource": "flexContainerAnnc",
+		"shortname": "undefined"
+	},
+	{	"type": 10029,
+		"resource": "timeSeriesAnnc",
+		"shortname": "tsA"
+	},
+	{	"type": 10030,
+		"resource": "timeSeriesInstanceAnnc",
+		"shortname": "tsiA"
+	},
+	{	"type": 10038,
+		"resource": "ontologyRepositoryAnnc",
+		"shortname": "ontrA"
+	},
+	{	"type": 10039,
+		"resource": "ontologyAnnc",
+		"shortname": "ontA"
+	},
+	{	"type": 10040,
+		"resource": "ontologyAnnc",
+		"shortname": "smjpA"
+	},
+	{	"type": 10041,
+		"resource": "semanticMashupInstanceAnnc",
+		"shortname": "smiA"
+	},
+	{	"type": 10042,
+		"resource": "semanticMashupResultAnnc",
+		"shortname": "smrA"
+	},
+	{	"type": 10046,
+		"resource": "multimediaSessionAnnc",
+		"shortname": "mmsA"
+	},
+	{	"type": 10052,
+		"resource": "ontologyMappingAnnc",
+		"shortname": "ontmA"
+	},
+	{	"type": 10053,
+		"resource": "ontologyMappingAlgorithmAnnc",
+		"shortname": "omalA"
+	},
+	{	"type": 10054,
+		"resource": "ontologyMappingAlgorithmRepositoryAnnc",
+		"shortname": "omarA"
+	},
+	{	"type": 10055,
+		"resource": "reasoningJobInstanceAnnc",
+		"shortname": "rjiA"
+	},
+	{	"type": 10056,
+		"resource": "reasoningRulesAnnc",
+		"shortname": "rrulA"
+	},
+	{	"type": 10057,
+		"resource": "semanticRuleRepositoryAnnc",
+		"shortname": "srrA"
+	},
+	{	"type": 10060,
+		"resource": "timeSyncBeaconAnnc",
+		"shortname": "tsbA"
+	},
+	{	"type": 10062,
+		"resource": "primitiveProfileAnnc",
+		"shortname": "prpA"
+	},
+	{	"type": 10063,
+		"resource": "processManagementAnnc",
+		"shortname": "prmrA"
+	},
+	{	"type": 10064,
+		"resource": "stateAnnc",
+		"shortname": "stteA"
+	},
+	{	"type": 10065,
+		"resource": "actionAnnc",
+		"shortname": "actrA"
+	},
+	{	"type": 10066,
+		"resource": "dependencyAnnc",
+		"shortname": "deprA"
+	},
+	{	"type": 10068,
+		"resource": "softwareCampaignAnnc",
+		"shortname": "swcmA"
+	}
+]
+

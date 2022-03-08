@@ -7,15 +7,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2022-03-08
+
+### Added
+- Keyword **sn**: Added action to copy only the attribute's short name to the clipboard (```Shift-return```).
+- Keyword **ty**: Added new keyword search for oneM2M resource types (keyword: ```ty```).
+- Keyword **acop**: Added new keyword search to resolve or create oneM2M Access Control Operation numbers (keyword: ```acop```).
+- Keyword **rsc**: Added new keyword search to resolve Response Status Codes (keyword: ```rsc```).
+
+### Changed
+- Updated to the latest version of the attributes file.
+
+
 ## [1.2.2] - 2021-09-20
 
 ### Added
-- Added copying only the long name to the clipboard (by pressing ```Ctrl-return```).
+- Added copying only the attribute name to the clipboard (by pressing ```Ctrl-return```).
 
 ### Fixed
 - Corrected missing http/coap for UPDATED RSC.
 
-## Changed
+### Changed
 - Updated to the latest version of the attributes file.
 
 

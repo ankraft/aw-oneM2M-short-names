@@ -19,6 +19,7 @@
 	},
 
 
+
 	{	"rsc": 2000,
 		"description": "OK",
 		"http": "200 (OK)",
@@ -43,6 +44,7 @@
 		"coap": "2.04 (Changed)",
 		"class": "Successful response"
 	},
+
 
 
 	{	"rsc": 4000,
@@ -299,6 +301,7 @@
 	},
 
 
+
 	{	"rsc": 5000,
 		"description": "INTERNAL SERVER ERROR",
 		"http": "500 (Internal Server Error)",
@@ -474,8 +477,7 @@
 		"class": "Receiver error response"
 	},
 
-
-
+	
 	{	"rsc": 6003,
 		"description": "EXTERNAL OBJECT NOT REACHABLE",
 		"http": "404 (Not Found)",
